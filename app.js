@@ -15,8 +15,9 @@ app.get('/', (req, res) => {
 });
 
 //Weather Route
-app.post('/api/weather', (req, res) => {
-  const zip = req.body.zipcode;
+app.get('/api/weather/:zip', (req, res) => {
+  // const zip = req.body.zipcode;
+  const zip = req.params.zip;
   const appSecret = "0f6f539a51844dc80364edb30889276b";
   const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${appSecret}`;
 
