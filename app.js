@@ -21,7 +21,14 @@ app.post('/api/weather', (req, res) => {
   const weatherUrl = `http://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${appSecret}`;
 
   axios.get(weatherUrl).then((response) => {
-    res.status(200).send(response.data);
+    const result = {
+      description: response.data.weather[0].description,
+      temp: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      windSpeed: response.data.wind.speed,
+      cityName: response.data.name,
+    };
+    res.status(200).send(result);
   }).catch((e) => {
     if(e.code === 'ENOTFOUND'){
       console.log('Unable to connect to API servers');
