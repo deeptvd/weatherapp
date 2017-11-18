@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+var exphbs  = require('express-handlebars');
 const axios = require('axios');
 
 const app = express();
@@ -8,6 +9,10 @@ const port = 3000;
 
 //Body Parser Middleware
 app.use(bodyParser.json());
+
+//Handlebars middleware
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
 
 //Index Route
 app.get('/', (req, res) => {
