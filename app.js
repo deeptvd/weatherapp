@@ -7,7 +7,7 @@ const axios = require('axios');
 
 const app = express();
 
-const port = process.env.PORT;
+const port = 3000;
 
 //Body Parser Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
