@@ -2,7 +2,8 @@
 
 ### Node JS Weather app using OpenWeatherMap API
 
-# [Click Here to go to the App] (https://botkeeperchallenge.herokuapp.com/)
+# Link to the app:
+https://botkeeperchallenge.herokuapp.com/)
 
 #### Built By
 Deep Trivedi, deeptvd@gmail.com
