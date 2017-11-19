@@ -14,7 +14,7 @@ Deep Trivedi, deeptvd@gmail.com
 - Body Parser,
 - Connect Flash
 - Axios
-- Express Handlebars
+- Handlebars
 
 ### Deployed to:-
 - Heroku Cloud
