@@ -1,0 +1,24 @@
+<div class="card card-body mb-3 container">
+  <h3>Get Real Time Weather information</h3>
+  <form action="/api/weather" method="POST">
+    <div class="form-group">
+      <label for="zipcode">Zipcode</label>
+      <input type="text" class="form-control" name="zipcode" placeholder="Enter your ZipCode" required>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+  </form>
+</div>
+
+{{#if result}}
+<div class="card text-center container" style="width:400px">
+  <img class="card-img-top" src="https://www.weather2umbrella.com/wp-content/themes/w2u/image/svg/weather-icons/d13.svg" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h5>Description: {{result.description}}</h5>
+      <h5>Temprature: {{result.temp}} Fahrenheit</h5>
+      <h5>Humidity: {{result.humidity}}%</h5>
+      <h5>Windspeed: {{result.windSpeed}} miles/hour</h5>
+      <h5>City: {{result.cityName}}</h5>
+    </div>
+  </div>
+{{else}}
+{{/if}}
