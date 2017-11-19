@@ -4,6 +4,7 @@
   "description": "Weather app using OpenWeatherMap API for Botkeeper coding challenge",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Deep Trivedi",
